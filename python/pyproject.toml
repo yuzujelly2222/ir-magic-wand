@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "magic-wand"
+dynamic = ["version"]
+description = "杖 (ATtiny85 + MPU-6050) から赤外線で届いたストロークを受け取り、ジェスチャーとして判定する"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "yuzujelly2222" }]
+requires-python = ">=3.9"
+dependencies = [
+    "pyserial",
+    "dollar-one-recognizer-py",
+]
+
+[project.urls]
+Homepage = "https://github.com/yuzujelly2222/ir-magic-wand"
+
+[tool.setuptools]
+packages = ["magic_wand"]
+
+[tool.setuptools.dynamic]
+version = { attr = "magic_wand.__version__" }

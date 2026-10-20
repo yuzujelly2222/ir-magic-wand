@@ -1,0 +1,9 @@
+# ATTinyCore がスケッチのフォルダに出力するビルド結果
+*.elf
+*.lst
+*.map
+*.hex
+__pycache__/
+*.egg-info/
+build/
+.vscode/
